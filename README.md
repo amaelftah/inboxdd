@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://inboxdd.com">Inbox <span style="color:#FF2D20;">dd();</span></a></h1>
+<p align="center"><img src="readme.png" width="400"></p>
 
 ## Keep updated with what's happening in laravel community
 
