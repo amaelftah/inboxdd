@@ -52,20 +52,40 @@
           <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
             Get the best of laravel community weekly into your inbox
           </p>
-          <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-            <form class=" sm:flex">
-              <input aria-label="Email address" type="email" required
-                class="appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:max-w-xs"
-                placeholder="Enter your email" />
-              <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                <!-- <button class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"> -->
-                <button onMouseOver="this.style.backgroundColor='#EF4E4E'"
+
+
+          <div class=" email-octopus-form-wrapper">
+            <p class="mt-2 text-sm text-green-600 email-octopus-success-message"></p>
+            <p class="mt-2 text-sm text-red-600 email-octopus-error-message"></p>
+
+            <form class="email-octopus-form sm:flex mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8"
+              method="post"
+              action="https://emailoctopus.com/lists/f84b1442-5b32-11ea-a3d0-06b4694bee2a/members/embedded/1.3/add"
+              data-sitekey="6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6">
+
+
+              <div class="email-octopus-form-row">
+                <input aria-label="Email address" type="email" required id="field_0" name="field_0"
+                  class="appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:max-w-xs"
+                  placeholder="Enter your email" />
+              </div>
+
+
+              <div class="email-octopus-form-row-hp hidden" aria-hidden="true">
+                <!-- Do not remove this field, otherwise you risk bot sign-ups -->
+                <input type="text" name="hpf84b1442-5b32-11ea-a3d0-06b4694bee2a" tabindex="-1" autocomplete="nope">
+              </div>
+
+              <div class="mt-3 rounded-md  sm:mt-0 sm:ml-3 sm:flex-shrink-0 email-octopus-form-row-subscribe">
+                <input type="hidden" name="successRedirectUrl" value="">
+                <button onMouseOver="this.style.backgroundColor='#EF4E4E'" type="submit"
                   onMouseOut="this.style.backgroundColor='#ff2d20'" style="background-color: #ff2d20;"
                   class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white hover:bg-red-200 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                   Subscribe
                 </button>
               </div>
             </form>
+
           </div>
         </div>
       </div>
@@ -173,6 +193,8 @@
     </div>
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://emailoctopus.com/bundles/emailoctopuslist/js/1.4/formEmbed.js"></script>
 </body>
 
 </html>
